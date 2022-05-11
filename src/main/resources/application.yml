@@ -4,8 +4,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/dio-academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
     username: postgres
     password: postgres
-jpa:
-  show-sql: true
-  hibernate:
-    ddl-auto: update
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
     
