@@ -6,51 +6,129 @@
 	},
 	"item": [
 		{
-			"name": "Retorna todos os alunos",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/alunos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"alunos"
-					]
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Retorna todos os alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna todas avaliações de um aluno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alunos/avaliacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos",
+								"avaliacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Tarcísio Nunes\",\n    \"cpf\": \"123.456.789-00\",\n    \"bairro\": \"Vila do Chaves\",\n    \"dataDeNascimento\": \"31/01/1999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Cria aluno",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Tarcísio Nunes\",\n    \"cpf\": \"123.456.789-00\",\n    \"bairro\": \"Vila do Chaves\",\n    \"dataDeNascimento\": \"31/01/1999\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Avaliação Física",
+			"item": [
+				{
+					"name": "Retorna todas Avaliações Físicas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/alunos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"alunos"
-					]
+				{
+					"name": "Cria avaliação física",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alunoId\": 1,\n    \"peso\": 105.75,\n    \"altura\": 178.77\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/avalicaoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"avalicaoes"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
