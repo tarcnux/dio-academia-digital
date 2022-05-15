@@ -28,6 +28,52 @@
 					"response": []
 				},
 				{
+					"name": "Retorna um aluno especificado pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alunos/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna lista de alunos nascidos em uma data de nascimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alunos/?dataDeNascimento=31/01/1999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos",
+								""
+							],
+							"query": [
+								{
+									"key": "dataDeNascimento",
+									"value": "31/01/1999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Retorna todas avaliações de um aluno",
 					"request": {
 						"method": "GET",
@@ -55,7 +101,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Tatá com CPF válido\",\n    \"cpf\": \"355.207.590-90\",\n    \"bairro\": \"Vila do Chaves\",\n    \"dataDeNascimento\": \"31/01/2000\"\n}",
+							"raw": "{\n    \"nome\": \"Quico Rá Rá Rá\",\n    \"cpf\": \"843.739.230-60\",\n    \"bairro\": \"Vila do Quico\",\n    \"dataDeNascimento\": \"31/01/2012\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -101,13 +147,38 @@
 					"response": []
 				},
 				{
+					"name": "Retorna todos as matriculas de um bairro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/matriculas?bairro=Vila do Quico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matriculas"
+							],
+							"query": [
+								{
+									"key": "bairro",
+									"value": "Vila do Quico"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Cria Matricula",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"alunoId\": 6\n}",
+							"raw": "{\n    \"alunoId\": 7\n}",
 							"options": {
 								"raw": {
 									"language": "json"
