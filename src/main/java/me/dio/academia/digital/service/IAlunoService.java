@@ -27,6 +27,8 @@ public interface IAlunoService {
    * @return - Uma lista os Alunos que estão salvas no DB.
    */
   List<Aluno> getAll();
+  
+  List<Aluno> getAll(String dataDeNascimento);
 
   /**
    * Atualiza o Aluno.
@@ -49,4 +51,5 @@ public interface IAlunoService {
    * @return lista de Avaliações físicas
    */
   List<AvaliacaoFisica> getAllAvalicaoFisicaByAlunoId(Long idAluno);
+
 }
