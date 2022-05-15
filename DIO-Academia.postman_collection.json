@@ -55,7 +55,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Tarcísio Nunes\",\n    \"cpf\": \"123.456.789-00\",\n    \"bairro\": \"Vila do Chaves\",\n    \"dataDeNascimento\": \"31/01/1999\"\n}",
+							"raw": "{\n    \"nome\": \"Tatá com CPF válido\",\n    \"cpf\": \"355.207.590-90\",\n    \"bairro\": \"Vila do Chaves\",\n    \"dataDeNascimento\": \"31/01/2000\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -79,6 +79,58 @@
 			]
 		},
 		{
+			"name": "Matricula",
+			"item": [
+				{
+					"name": "Retorna todos as matriculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/matriculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria Matricula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alunoId\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matriculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matriculas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Avaliação Física",
 			"item": [
 				{
@@ -87,14 +139,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/alunos",
+							"raw": "http://localhost:8080/avaliacoes",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"alunos"
+								"avaliacoes"
 							]
 						}
 					},
@@ -107,7 +159,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"alunoId\": 1,\n    \"peso\": 105.75,\n    \"altura\": 178.77\n}",
+							"raw": "{\n    \"alunoId\": 1,\n    \"peso\": 102.75,\n    \"altura\": 178.77\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -115,14 +167,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/avalicaoes",
+							"raw": "http://localhost:8080/avaliacoes",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"avalicaoes"
+								"avaliacoes"
 							]
 						}
 					},
